@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import NoticesItem from './NoticesItem';
 
-
 const NoticesListBlock = styled.div`
 	box-sizing: border-box;
 	padding-bottom: 3rem;
