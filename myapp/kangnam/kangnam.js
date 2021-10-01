@@ -1,8 +1,8 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
-const log = console.log;
 const express = require("express");
 const cors = require("cors");
+const log = console.log;
 const PORT = 4000;
 const app = express();
 
