@@ -3,7 +3,7 @@ const cheerio = require('cheerio');
 const express = require("express");
 const cors = require("cors");
 const log = console.log;
-const PORT = 4000;
+const PORT = 3000;
 const app = express();
 
 app.use(cors());
@@ -46,5 +46,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(PORT, () => 
-	console.log(`Example app listening at http://localhost:${PORT}`)
+	console.log('Server listening on port 3000')
 );

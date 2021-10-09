@@ -18,6 +18,8 @@ const sampleArticle = {
 
 const NoticesList = () => {
     
+	const site="https://web.kangnam.ac.kr/";
+	
     const [data, setData] = useState(null);
     useEffect(() => {
         const getData = async() => {
@@ -40,7 +42,7 @@ const NoticesList = () => {
                 {data.map((ele) => (
                     <>
                         <div>
-                            {ele.title};
+                            <a href={site+decodeURIComponent(ele.url.slice(17))}>{ele.title}</a>
                         </div>
                     <br/>
                     </>
