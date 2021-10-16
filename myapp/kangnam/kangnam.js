@@ -2,8 +2,6 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const express = require("express");
 const cors = require("cors");
-const log = console.log;
-const PORT = 3000;
 const app = express();
 
 app.use(cors());
@@ -23,10 +21,10 @@ const getHTML = async () => {
 app.get("/", (req, res) => {
 	getHTML()
 		.then((html) => {
+		let resultArr = [];
 		const $ = cheerio.load(html.data);
 		const $allNotices = $("ul.tab_listl div.list_txt");
 
-		let resultArr = [];
 		$allNotices.each(function(idx, element) {
 			let itemObj = {
 				title : $(this).children('a').attr('title'),
