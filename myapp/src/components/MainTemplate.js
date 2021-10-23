@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 // import styled from 'styled-components';
 import axios from 'axios';
 import NoticesList from './NoticesList';
+import Event_InformationList from './Event_InformationList';
 
 const MainTemplate = () => {
 	const Main = {
@@ -10,6 +11,10 @@ const MainTemplate = () => {
 		justifyContent: 'center',
 		padding: '60px',
 	};
+
+	// const CrawlPart = {
+	// 	display: 'flex',
+	// };
 
 	const Section01 = {
 		margin: '25px',
@@ -63,9 +68,9 @@ const MainTemplate = () => {
 					<NoticesList mydata={data} />
 				</div>
 
-				<div className="Section03" style={Section03}>
+				<div className="Section03" style={Section01}>
 					행사/안내
-					<NoticesList mydata={data}/>
+					<Event_InformationList mydata={data} />
 				</div>
 
 				<div className="Section02" style={Section02}>
