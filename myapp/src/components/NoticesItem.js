@@ -12,7 +12,7 @@ const NoticesItemBlock = styled.div`
 		}
 	}
 	& + & {
-		margin-top: 1.5rem;
+		margin-top: 30px;
 	}
 `;
 
