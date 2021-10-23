@@ -13,7 +13,7 @@ const HeaderTemplate = () => {
 	
     return (
        <div className = "Header" style={Header}>
-			비교과 & 학습공동체 & 튜터링 플랫폼 사이트
+			인턴공고 및 학교공지 플랫폼 사이트
 		</div>
     );
 }

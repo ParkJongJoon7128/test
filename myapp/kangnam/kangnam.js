@@ -8,7 +8,7 @@ app.use(cors());
 
 const getHTML = async () => {
 	try {
-		return await axios.get('https://web.kangnam.ac.kr', {
+		return await axios.get('https://careerly.co.kr/jobs', {
 			headers: {
 				Accept: 'text/html'
 			}

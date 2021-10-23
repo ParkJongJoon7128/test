@@ -4,6 +4,7 @@ import 'react-tabs/style/react-tabs.css';
 import styled from 'styled-components';
 import axios from 'axios';
 import NoticesItem from './NoticesItem';
+import './react-crawl-tabs.css';
 
 const NoticesListBlock = styled.div`
 	box-sizing: border-box;
@@ -23,7 +24,7 @@ const NoticesList = (props) => {
 
 	return (
 		<div style={{ fontSize: '0.4em' }}>
-			<div style={{ border: 'solid 1px' }}>
+			<div>
 				<Tabs>
 					<TabList>
 						<Tab>전체공지</Tab>
