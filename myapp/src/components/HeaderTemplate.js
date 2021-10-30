@@ -11,9 +11,21 @@ const HeaderTemplate = () => {
 		height: '5vh'
 	}
 	
+	const Signin = {
+		backgroundColor: '#00bcd4',
+		color: "#fff",
+		fontSize: '20px',
+		width: '150px',
+		height: '5vh',
+		float: 'right',
+		border: 'none',
+		borderRadius: '10px'
+	}
+	
     return (
        <div className = "Header" style={Header}>
 			인턴공고 및 학교공지 플랫폼 사이트
+			<button className = "Signin" style = {Signin} Link to = "Signin">Sign-in</button>
 		</div>
     );
 }

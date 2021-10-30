@@ -35,7 +35,7 @@ const MainTemplate = () => {
 	useEffect(() => {
 		const getData = async () => {
 			const datas = await axios.get(
-				'https://all-in-one-proxy.herokuapp.com/https://connectto.herokuapp.com/koreanews'
+				'https://kangnam-site.herokuapp.com/'
 			);
 			setData(datas.data);
 		};
