@@ -19,7 +19,9 @@ const HeaderTemplate = () => {
 		height: '5vh',
 		float: 'right',
 		border: 'none',
-		borderRadius: '10px'
+		borderRadius: '10px',
+		outline: 'none',
+		cursor: 'pointer'
 	}
 	
     return (
