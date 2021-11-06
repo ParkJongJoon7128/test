@@ -3,7 +3,7 @@ import { Link, Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
 const SignupForm = () => {
 	const [firstName, setFirstName] = useState("");
-	const [lastName, setlastName] = useState("");
+	const [lastName, setLastName] = useState("");
 	const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 	const [confirmPassword, setconfirmPassword] = useState("");
@@ -18,14 +18,14 @@ const SignupForm = () => {
 		<h1>Sign Up</h1>
 		<h6>Please fill in this form to create an account!</h6>
 		<input
-			value={first_name}
-			onChange={({ target: { value } }) => setEmail(value)}
+			value={firstName}
+			onChange={({ target: { value } }) => setFirstName(value)}
 			type="text"
 			placeholder="First Name"
 			/>
 		<input
-			value={last_name}
-			onChange={({ target: { value } }) => setEmail(value)}
+			value={lastName}
+			onChange={({ target: { value } }) => setLastName(value)}
 			type="text"
 			placeholder="Last Name"
 			/>
@@ -42,8 +42,8 @@ const SignupForm = () => {
 			placeholder="password"
 			/>
 		<input
-			value={confirm_password}
-			onChange={({ target: { value } }) => setPassword(value)}
+			value={confirmPassword}
+			onChange={({ target: { value } }) => setconfirmPassword(value)}
 			type="password"
 			placeholder="Confirm Password"
 			/>
