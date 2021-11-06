@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '/workspace/test/myapp/node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 import LoginForm from './components/LoginForm.js';
 import SignupForm from './components/SignupForm.js';
