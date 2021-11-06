@@ -1,6 +1,15 @@
 import React, {useState} from 'react';
 
 const LoginForm = () => {
+	
+	const [email, setemail] = useState("");
+    const [password, setpassword] = useState("");
+
+    const showdata = () => {
+        console.log(email);
+        console.log(password);
+    }
+	
 	return (
 		<>
 		<h1>Sign-in</h1>
@@ -16,7 +25,7 @@ const LoginForm = () => {
 			type="password"
 			placeholder="password"
 			/>
-		<button>Sign-in</button>
+		<button onClick = { showdata }>Sign-in</button>
 			</>);
 };
 

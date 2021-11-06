@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+
+import Login from './LoginForm';
 
 const HeaderTemplate = () => {
 	const Header = {
@@ -11,7 +13,7 @@ const HeaderTemplate = () => {
 		height: '5vh',
 	};
 
-	const Signin = {
+	const Login = {
 		backgroundColor: '#0bb286',
 		color: '#fff',
 		fontSize: '20px',
@@ -27,9 +29,11 @@ const HeaderTemplate = () => {
 	return (
 		<div className="Header" style={Header}>
 			인턴공고 및 학교공지 플랫폼 사이트
-			<button className="Signin" style={Signin} onClick="">
-				Sign-in
-			</button>
+			<Link to="/Login">
+				<button className="Login" style={Signin}>
+					Sign-in
+				</button>
+			</Link>
 		</div>
 	);
 };
