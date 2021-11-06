@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
-import Login from './LoginForm';
 
 const HeaderTemplate = () => {
 	const Header = {
@@ -30,7 +29,7 @@ const HeaderTemplate = () => {
 		<div className="Header" style={Header}>
 			인턴공고 및 학교공지 플랫폼 사이트
 			<Link to="/Login">
-				<button className="Login" style={Signin}>
+				<button className="Login" style={Login}>
 					Sign-in
 				</button>
 			</Link>

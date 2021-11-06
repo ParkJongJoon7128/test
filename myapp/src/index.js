@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Login from './LoginForm';
-
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
+import LoginForm from './components/LoginForm.js';
+import SignupForm from './components/SignupForm.js';
 ReactDOM.render(
 	<React.StrictMode>
 		<Router>
@@ -15,6 +15,9 @@ ReactDOM.render(
 			</Route>
 			<Route path="/Login" exact>
 				<LoginForm />
+			</Route>
+			<Route path="/Signup" exact>
+				<SignupForm />
 			</Route>
 		</Router>
 	</React.StrictMode>,

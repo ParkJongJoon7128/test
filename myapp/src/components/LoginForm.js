@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
+import { Link, Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
 const LoginForm = () => {
 	
-	const [email, setemail] = useState("");
-    const [password, setpassword] = useState("");
+	const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
     const showdata = () => {
         console.log(email);
@@ -13,7 +14,7 @@ const LoginForm = () => {
 	return (
 		<>
 		<h1>Sign-in</h1>
-		<inout
+		<input
 			value={email}
 			onChange={({ target: { value } }) => setEmail(value)}
 			type="text"
@@ -25,6 +26,9 @@ const LoginForm = () => {
 			type="password"
 			placeholder="password"
 			/>
+		<>
+		You dont have a account? <Link to="/Signup">Click the sign-up</Link>
+		</>
 		<button onClick = { showdata }>Sign-in</button>
 			</>);
 };
