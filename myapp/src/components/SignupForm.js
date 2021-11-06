@@ -2,9 +2,11 @@ import React, {useState} from 'react';
 import { Link, Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
 const SignupForm = () => {
-	
+	const [firstName, setFirstName] = useState("");
+	const [lastName, setlastName] = useState("");
 	const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+	const [confirmPassword, setconfirmPassword] = useState("");
 
     const showdata = () => {
         console.log(email);
@@ -40,7 +42,7 @@ const SignupForm = () => {
 			placeholder="password"
 			/>
 		<input
-			value={password}
+			value={confirm_password}
 			onChange={({ target: { value } }) => setPassword(value)}
 			type="password"
 			placeholder="Confirm Password"
