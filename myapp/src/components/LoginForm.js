@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, Route, Switch, BrowserRouter as Router } from 'react-router-dom';
-import "./bootstrap.min.css"
+ import "/workspace/test/myapp/src/styles/LoginForm.css";
 
 const LoginForm = () => {
 	const [email, setEmail] = useState('');
@@ -47,9 +47,9 @@ const LoginForm = () => {
 			</div>
 
 			<div>
-				You dont have a account? <Link to="/Signup">Click the sign-up</Link>
+				You dont have a account? Click the <Link to="/Signup">sign up</Link>
 			</div>
-			<button onClick={showdata}>Sign-in</button>
+			<button onClick={showdata} className="btn btn-primary btn-block">Sign In</button>
 			<p className="forgot-password text-right">
 				Forgot <a href="#">password?</a>
 			</p>
