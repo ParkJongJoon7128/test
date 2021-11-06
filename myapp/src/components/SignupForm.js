@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+import "./bootstrap.min.css"
 
 const SignupForm = () => {
 	const [firstName, setFirstName] = useState('');
@@ -77,7 +78,7 @@ const SignupForm = () => {
 				Sign Up
 			</button>
 			<p className="forgot-password text-right">
-				Already registered <a href="#">sign in?</a>
+				Already registered <Link to="/Login">sign in?</Link>
 			</p>
 		</form>
 	);

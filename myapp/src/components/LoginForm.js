@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+import "./bootstrap.min.css"
 
 const LoginForm = () => {
 	const [email, setEmail] = useState('');
