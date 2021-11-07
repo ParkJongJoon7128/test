@@ -8,7 +8,7 @@ const FooterTemplate = () => {
         fontSize: '32px',
         padding: '20px',
         width: '100%',
-		height: '5vh',
+		height: '10vh',
 		textAlign: "center"
 	}
 	

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
-
 const HeaderTemplate = () => {
 	const Header = {
 		backgroundColor: '#0bb286',
@@ -9,7 +8,7 @@ const HeaderTemplate = () => {
 		fontSize: '32px',
 		padding: '20px',
 		width: '100%',
-		height: '5vh',
+		height: '10vh',
 	};
 
 	const Login = {
@@ -17,7 +16,7 @@ const HeaderTemplate = () => {
 		color: '#fff',
 		fontSize: '20px',
 		width: '100px',
-		height: '5vh',
+		height: '10vh',
 		float: 'right',
 		border: 'none',
 		borderRadius: '10px',
