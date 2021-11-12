@@ -8,7 +8,7 @@ const HeaderTemplate = () => {
 		fontSize: '32px',
 		padding: '20px',
 		width: '100%',
-		height: '10vh',
+		height: '10vh'
 	};
 
 	const Login = {
