@@ -1,48 +1,34 @@
-const axios = require('axios');
-const cheerio = require('cheerio');
-const express = require("express");
-const cors = require("cors");
-const app = express();
+let username;
+let passname;
 
-app.use(cors());
+mongoose.connect('mongodb+srv://<whdwnsdk8111>:<whdwnsdk2>@cluster0.nrmui.mongodb.net/test').then(()=>{
+    console.log('connected');}
+    ).catch(err => console.error(err))
 
-const getHTML = async () => {
-	try {
-		return await axios.get('https://web.kangnam.ac.kr/', {
-			headers: {
-				Accept: 'text/html'
-			}
-		});
-	} catch (error) {
-		console.log(error);
-	}
-};
+app.get("/seeusers", (req, res) => {
+  detail.find({}, (err, result ) => {
+    return res.send(result)
+  })
+})
 
-app.get("/", (req, res) => {
-	getHTML()
-		.then((html) => {
-		let resultArr = [];
-		const $ = cheerio.load(html.data);
-		const $allNotices = $("ul.tab_listl div.list_txt");
+app.post("/newuser", (req, res) => {
+  username = req.body.username;
+  passname = req.body.passname;
+  res.send("done");
+})
 
-		$allNotices.each(function(idx, element) {
-			let itemObj = {
-				title : $(this).children('a').attr('title'),
-				url : $(this).children('a').attr('href'),
-			};
-			resultArr.push(itemObj);
-		});
-		
-		resultArr.forEach((element) => {
-			console.log(`${element.title}`);
-		});
-		return resultArr;
-
-		// const data = ulList.filter(n => n.title);
-		// return data;
-	}). then((data) => res.send(data));
-});
-
-app.listen(PORT, () => 
-	console.log('Server listening on port 3000')
-);
+app.get("/newusersave", (req, res) => {
+    detail.insertMany(
+        [
+          { name: username,
+            pass: passname }
+          ],
+        function(err, result) {
+          if (err) {
+            res.send(err);
+          } else {
+            res.send(result);
+          }
+        }
+      );
+})
