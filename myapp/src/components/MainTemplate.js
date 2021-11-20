@@ -35,7 +35,7 @@ const MainTemplate = () => {
 	useEffect(() => {
 		const getData = async () => {
 			const datas = await axios.get(
-				'https://kangnam-site.herokuapp.com/'
+				'https://kangnam-site.herokuapp.com/newslist'
 			);
 			setData(datas.data);
 		};
