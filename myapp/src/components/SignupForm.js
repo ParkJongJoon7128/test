@@ -1,14 +1,29 @@
 import React, { useState } from 'react';
 import { Link, Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+const axios = require('axios');
 // import "/workspace/test/myapp/src/App.css";
 
 const SignupForm = () => {
-	
 	const [firstName, setFirstName] = useState('');
 	const [lastName, setLastName] = useState('');
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const [confirmPassword, setconfirmPassword] = useState('');
+
+	const sendusers = () => {
+		axios
+			.post('https://kangnam-site.herokuapp.com/newuser', {
+				username: firstName + lastName,
+				passname: confirmPassword,
+			})
+			.then((response1) => {
+				if (response1.data == 'done') {
+					axios
+						.get('https://kangnam-site.herokuapp.com/newusersave')
+						.then((response2) => {});
+				}
+			});
+	};
 
 	const showdata = () => {
 		console.log(email);
@@ -74,10 +89,11 @@ const SignupForm = () => {
 					placeholder="Confirm Password"
 				/>
 			</div>
-
-			<button onClick={showdata} className="btn btn-primary btn-block">
+<Link to="/">
+			<button onClick={sendusers} className="btn btn-primary btn-block">
 				Sign Up
 			</button>
+	</Link>
 			<p className="forgot-password text-right">
 				Already registered <Link to="/Login">sign in?</Link>
 			</p>

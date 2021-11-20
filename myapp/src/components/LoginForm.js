@@ -1,12 +1,22 @@
 import React, { useState } from 'react';
 import { Link, Route, Switch, BrowserRouter as Router } from 'react-router-dom';
-import '/workspace/test/myapp/src/styles/LoginForm.css';
+const axios = require('axios');
+//import '/workspace/test/myapp/src/styles/LoginForm.css';
 
 const LoginForm = () => {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
+	const [userList, setuserList] = useState([]);
 
-	const showdata = () => {
+	const getusers = () => {
+		axios.get('https://kangnam-site.herokuapp.com/seeusers').then((response3) => {
+			response3.filter((users) => {
+				if (users.name.includes(email) && users.pass.includes(password)) {
+					console.log('you have login');
+				}
+			});
+		});
+
 		console.log(email);
 		console.log(password);
 	};
@@ -50,10 +60,11 @@ const LoginForm = () => {
 				<p className="forgot-password text-right">
 					Forgot <a href="#">password?</a>
 				</p>
-
-				<button onClick={showdata} className="btn btn-primary btn-block">
-					Sign In
-				</button>
+				<Link to="/">
+					<button onClick={getusers} className="btn btn-primary btn-block">
+						Sign In
+					</button>
+				</Link>
 				<div>
 					You dont have a account? Click the <Link to="/Signup">sign up</Link>
 				</div>
