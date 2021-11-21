@@ -14,7 +14,7 @@ app.use(cors());
 app.use(bodyparser.json());
 
 let username;
-let passname;
+let password;
 
 mongoose.connect('mongodb+srv://whdwnsdk8111:whdwnsdk2@cluster0.nrmui.mongodb.net/test').then(()=>{
     console.log('connected');}
@@ -27,16 +27,20 @@ app.get("/seeusers", (req, res) => {
 })
 
 app.post("/newuser", (req, res) => {
-  username = req.body.username;
-  passname = req.body.passname;
+  firstname = req.body.firstname;
+  lastname = req.body.lastname;
+  email = req.body.email;
+  pass = req.body.password;
   res.send("done");
 })
 
 app.get("/newusersave", (req, res) => {
     detail.insertMany(
         [
-          { name: username,
-            pass: passname }
+          { firstname: firstname,
+            lastname: lastname,
+            email: email,
+            password: pass }
           ],
         function(err, result) {
           if (err) {

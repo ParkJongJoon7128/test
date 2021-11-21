@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+import { Link, Route, Switch, BrowserRouter, Redirect as Router } from 'react-router-dom';
 const axios = require('axios');
 //import '/workspace/test/myapp/src/styles/LoginForm.css';
 
@@ -9,12 +9,14 @@ const LoginForm = () => {
 	const [userList, setuserList] = useState([]);
 
 	const getusers = () => {
-		axios.get('https://kangnam-site.herokuapp.com/seeusers').then((response3) => {
-			response3.filter((users) => {
-				if (users.name.includes(email) && users.pass.includes(password)) {
-					console.log('you have login');
+		axios.get('https://kangnam-site.herokuapp.com/seeusers').then((response) => {
+			response.data.filter((users)=>{
+				if (users.email.includes(email)){
+					if (users.password === password) {
+						console.log("Logged in");
+					}
 				}
-			});
+			})
 		});
 
 		console.log(email);
@@ -23,7 +25,6 @@ const LoginForm = () => {
 
 	return (
 		<div className="login-form">
-			<form>
 				<h3>Sign In</h3>
 
 				<div className="form-group">
@@ -60,15 +61,13 @@ const LoginForm = () => {
 				<p className="forgot-password text-right">
 					Forgot <a href="#">password?</a>
 				</p>
-				<Link to="/">
-					<button onClick={getusers} className="btn btn-primary btn-block">
-						Sign In
-					</button>
-				</Link>
+				<button onClick={getusers} className="btn btn-primary btn-block">
+					Sign In
+				</button>
+				
 				<div>
 					You dont have a account? Click the <Link to="/Signup">sign up</Link>
 				</div>
-			</form>
 		</div>
 	);
 };

@@ -14,13 +14,14 @@ const SignupForm = () => {
 		axios
 			.post('https://kangnam-site.herokuapp.com/newuser', {
 				username: firstName + lastName,
-				passname: confirmPassword,
+				password: confirmPassword,
+				email: email
 			})
-			.then((response1) => {
-				if (response1.data == 'done') {
+			.then((response) => {
+				if (response.data == 'done') {
 					axios
 						.get('https://kangnam-site.herokuapp.com/newusersave')
-						.then((response2) => {});
+						.then((response) => {});
 				}
 			});
 	};
