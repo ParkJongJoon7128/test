@@ -30,13 +30,13 @@ const MainTemplate = () => {
 		textAlign: 'center',
 	};
 
-	
 	const [data, setData] = useState(null);
+	const initialsesionsave = JSON.parse(localStorage.getItem('savesesion')) || [''];
+	 const [user, setuser] = useState(initialsesionsave.firstname || '');
+
 	useEffect(() => {
 		const getData = async () => {
-			const datas = await axios.get(
-				'https://kangnam-site.herokuapp.com/newslist'
-			);
+			const datas = await axios.get('https://kangnam-site.herokuapp.com/newslist');
 			setData(datas.data);
 		};
 		getData();
@@ -53,6 +53,7 @@ const MainTemplate = () => {
 			<div className="Main" style={Main}>
 				<div className="Section01" style={Section01}>
 					공지사항
+					<h1>{user}</h1>
 					<NoticesList mydata={data} />
 				</div>
 

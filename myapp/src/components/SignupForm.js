@@ -14,9 +14,9 @@ const SignupForm = () => {
 		axios
 			.post('https://kangnam-site.herokuapp.com/newuser', {
 				firstname: firstName,
-                lastname: lastName,
-                email: email,
-				password: confirmPassword
+				lastname: lastName,
+				email: email,
+				passname: confirmPassword,
 			})
 			.then((response) => {
 				if (response.data == 'done') {
@@ -91,11 +91,11 @@ const SignupForm = () => {
 					placeholder="Confirm Password"
 				/>
 			</div>
-<Link to="/">
-			<button onClick={sendusers} className="btn btn-primary btn-block">
-				Sign Up
-			</button>
-	</Link>
+			<Link to="/">
+				<button onClick={sendusers} className="btn btn-primary btn-block">
+					Sign Up
+				</button>
+			</Link>
 			<p className="forgot-password text-right">
 				Already registered <Link to="/Login">sign in?</Link>
 			</p>
