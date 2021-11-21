@@ -13,9 +13,10 @@ const SignupForm = () => {
 	const sendusers = () => {
 		axios
 			.post('https://kangnam-site.herokuapp.com/newuser', {
-				username: firstName + lastName,
-				password: confirmPassword,
-				email: email
+				firstname: firstName,
+                lastname: lastName,
+                email: email,
+				password: confirmPassword
 			})
 			.then((response) => {
 				if (response.data == 'done') {
