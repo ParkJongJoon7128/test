@@ -66,10 +66,11 @@ const LoginForm = () => {
 			<p className="forgot-password text-right">
 				Forgot <a href="#">password?</a>
 			</p>
-			<button onClick={getusers} className="btn btn-primary btn-block">
-				Sign In
-			</button>
-
+			<Link to="/">
+				<button onClick={getusers} className="btn btn-primary btn-block">
+					Sign In
+				</button>
+			</Link>
 			<div>
 				You dont have a account? Click the <Link to="/Signup">sign up</Link>
 			</div>
