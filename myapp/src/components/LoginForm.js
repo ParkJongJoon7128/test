@@ -14,7 +14,7 @@ const LoginForm = () => {
 				if (users.email.includes(email)) {
 					if (users.pass === password) {
 						let myObj = {
-							firstname: users.fisrtname,
+							firstname: users.firstname,
 							lastname: users.lastname,
 							email: users.email,
 						};
