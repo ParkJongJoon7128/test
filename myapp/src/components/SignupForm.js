@@ -27,6 +27,22 @@ const SignupForm = () => {
 			});
 	};
 
+	const checkusers = () => {
+		axios.get('https://kangnam-site.herokuapp.com/seeusers').then((response) => {
+			let found = false;
+			response.data.map((users) => {
+				if (users.email === email || users.pass === confirmPassword) {
+					found = true;
+				}
+			});
+			if (found) {
+				alert("이메일이나 비밀번호를 다른걸로 사용하십시오")
+			} else {
+				sendusers();
+			}
+		});
+	};
+
 	const showdata = () => {
 		console.log(email);
 		console.log(password);
@@ -91,11 +107,9 @@ const SignupForm = () => {
 					placeholder="Confirm Password"
 				/>
 			</div>
-			<Link to="/">
-				<button onClick={sendusers} className="btn btn-primary btn-block">
-					Sign Up
-				</button>
-			</Link>
+			<button onClick={checkusers} className="btn btn-primary btn-block">
+				Sign Up
+			</button>
 			<p className="forgot-password text-right">
 				Already registered <Link to="/Login">sign in?</Link>
 			</p>
