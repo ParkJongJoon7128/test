@@ -50,21 +50,6 @@ app.get('/newusersave', (req, res) => {
 	);
 });
 
-app.get('/airtable', (req, res) => {
-	axios
-		.get(
-			'https://api.airtable.com/v0/appzmwirFwYjuTQlq/%EC%9D%B8%ED%84%B4?maxRecords=3&view=Grid%20view',
-			{
-				headers: {
-					Authorization: 'Bearer keyhC6yt8QBk5uJkS',
-				},
-			}
-		)
-		.then((response) => {
-			res.send(response.data.records);
-		});
-});
-
 const getHTML = async () => {
 	try {
 		return await axios.get('https://web.kangnam.ac.kr', {

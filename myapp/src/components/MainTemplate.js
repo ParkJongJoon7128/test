@@ -31,7 +31,7 @@ const MainTemplate = () => {
 	};
 
 	const [data, setData] = useState(null);
-	
+
 	useEffect(() => {
 		const getData = async () => {
 			const datas = await axios.get('https://kangnam-site.herokuapp.com/newslist');
@@ -39,7 +39,7 @@ const MainTemplate = () => {
 		};
 		getData();
 	}, []);
-
+	
 	useEffect(() => {
 		console.log(data);
 	}, [data]);
@@ -59,8 +59,16 @@ const MainTemplate = () => {
 					<Event_InformationList mydata={data} />
 				</div>
 
-				<div className="Section02" style={Section02}>
-					인턴공고
+				<div className="Section02">
+					<iframe
+						class="airtable-embed"
+						src="https://airtable.com/embed/shrfgCdEx63VN1viq?backgroundColor=cyan&viewControls=on"
+						frameborder="0"
+						onmousewheel=""
+						width="100%"
+						height="533"
+						style="background: transparent; border: 1px solid #ccc;"
+					></iframe>
 				</div>
 			</div>
 		);
