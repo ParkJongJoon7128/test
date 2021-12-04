@@ -4,6 +4,7 @@ import 'react-tabs/style/react-tabs.css';
 import styled from 'styled-components';
 import axios from 'axios';
 import NoticesItem from './NoticesItem';
+import styles from '../styles/NoticeList.css';
 import './react-crawl-tabs.css';
 
 const NoticesListBlock = styled.div`
@@ -23,10 +24,10 @@ const NoticesList = (props) => {
 	const site = 'https://web.kangnam.ac.kr/';
 
 	return (
-		<div style={{ fontSize: '0.4em' }}>
+		<div>
 			<div>
 				<Tabs>
-					<TabList>
+					<TabList className="TabList" style={styles.TabList}>
 						<Tab>전체공지</Tab>
 						<Tab>학사공지</Tab>
 						<Tab>장학공지</Tab>
