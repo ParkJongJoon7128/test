@@ -63,7 +63,7 @@ app.get('/airtable', (req, res) => {
 		.then((response) => {
 			res.send(response.data.records);
 		});
-});
+});// 작업완료
 
 const getHTML = async () => {
 	try {
