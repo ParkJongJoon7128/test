@@ -56,14 +56,14 @@ app.get('/airtable', (req, res) => {
 			'https://airtable.com/appzmwirFwYjuTQlq/tblaYM2F5tJyCpxJM/viwB6q0Up0IR6ziyf?blocks=hide',
 			{
 				headers: {
-					Authorization: 'keyhC6yt8QBk5uJkS',
+					Authorization: 'Bearer  keyhC6yt8QBk5uJkS',
 				},
 			}
 		)
 		.then((response) => {
 			res.send(response.data.records);
 		});
-});// 작업완료
+});
 
 const getHTML = async () => {
 	try {
