@@ -53,10 +53,10 @@ app.get('/newusersave', (req, res) => {
 app.get('/airtable', (req, res) => {
 	axios
 		.get(
-			'https://airtable.com/appzmwirFwYjuTQlq/tblaYM2F5tJyCpxJM/viwB6q0Up0IR6ziyf?blocks=hide',
+			'https://api.airtable.com/v0/appzmwirFwYjuTQlq/%EC%9D%B8%ED%84%B4?maxRecords=3&view=Grid%20view',
 			{
 				headers: {
-					Authorization: 'Bearer  keyhC6yt8QBk5uJkS',
+					Authorization: 'Bearer keyhC6yt8QBk5uJkS',
 				},
 			}
 		)
