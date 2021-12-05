@@ -4,12 +4,8 @@
 	font-size: 18px;
 	padding: 20px;
 	width: 100%;
-	height: 10vh;
+	height: 15vh;
 	text-align: center;
-}
-
-.instagram{
-	width: 64px;
-	height: 64px;
-	background-color: #320bb2;
+	margin-top: 15px;
+	padding-top: 30px;
 }
