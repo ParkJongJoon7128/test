@@ -25,7 +25,6 @@ const MainTemplate = () => {
 						공지사항
 						<NoticesList mydata={data} />
 					</div>
-
 					<div className="Section02" style={styles.Section02}>
 						행사/안내
 						<Event_InformationList mydata={data} />
@@ -38,7 +37,7 @@ const MainTemplate = () => {
 							frameborder="0"
 							onmousewheel=""
 							width="100%"
-							height="533"
+							height="600px"
 							style={{ background: 'transparent', border: '1px solid #ccc' }}
 						></iframe>
 					</div>

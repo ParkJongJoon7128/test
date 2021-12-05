@@ -20,7 +20,7 @@ const HeaderTemplate = (props) => {
 
 	return (
 		<div className="Header" style={styles.Header}>
-			<div style={{ width: '50%' }}>
+			<div style={{ width: '60%' }}>
 				Kolleget
 				<Link to="/Login">
 					<button className="Login" style={props.myuser ? Hidden : styles.Login}>
@@ -37,7 +37,6 @@ const HeaderTemplate = (props) => {
 						<Dropdown.Item href="#/action-2">My Page</Dropdown.Item>
 					</DropdownButton>
 				</div>
-				<hr></hr>
 			</div>
 		</div>
 	);

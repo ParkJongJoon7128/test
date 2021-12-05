@@ -1,23 +1,16 @@
 import React from 'react';
+import styles from '../styles/FooterTemplate.css';
+import insta from '../images/instagram.png';
 
 const FooterTemplate = () => {
-	
-	const Footer = {
-		backgroundColor: '#0bb286',
-        color: '#fff',
-        fontSize: '32px',
-        padding: '20px',
-        width: '100%',
-		height: '10vh',
-		textAlign: "center"
-	}
-	
-    return (
-       <div className = "Footer" style={Footer}>
-			박종준
+	return (
+		<div className="Footer" style={styles.Footer}>
+			2021 © Park Jong Joon.
+			<div>
+				<img src={insta} className="instagram" alt="instagram" style={styles.instagram} />
+			</div>
 		</div>
-    );
-}
+	);
+};
 
 export default FooterTemplate;
-
