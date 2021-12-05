@@ -35,11 +35,11 @@ const NoticesList = (props) => {
 						<Tab>취창업</Tab>
 					</TabList>
 
-					<TabPanel>
+					<TabPanel className="TabPanel" style={styles.TabPanel}>
 						{props.mydata.slice(0, 8).map((ele) => (
 							<>
 								<div>
-									<a href={site + decodeURIComponent(ele.url.slice(17))}>
+									<a href={site + decodeURIComponent(ele.url.slice(17))} style={{ textDecoration: 'none', color: "black"}}>
 										{ele.title}
 									</a>
 								</div>
@@ -48,11 +48,11 @@ const NoticesList = (props) => {
 						))}
 					</TabPanel>
 
-					<TabPanel>
+					<TabPanel className="TabPanel" style={styles.TabPanel}>
 						{props.mydata.slice(8, 16).map((ele) => (
 							<>
 								<div>
-									<a href={site + decodeURIComponent(ele.url.slice(17))}>
+									<a href={site + decodeURIComponent(ele.url.slice(17))} style={{ textDecoration: 'none', color: "black" }}>
 										{ele.title}
 									</a>
 								</div>
@@ -60,11 +60,11 @@ const NoticesList = (props) => {
 							</>
 						))}
 					</TabPanel>
-					<TabPanel>
+					<TabPanel className="TabPanel" style={styles.TabPanel}>
 						{props.mydata.slice(16, 24).map((ele) => (
 							<>
 								<div>
-									<a href={site + decodeURIComponent(ele.url.slice(17))}>
+									<a href={site + decodeURIComponent(ele.url.slice(17))} style={{ textDecoration: 'none', color: "black" }}>
 										{ele.title}
 									</a>
 								</div>
@@ -72,11 +72,11 @@ const NoticesList = (props) => {
 							</>
 						))}
 					</TabPanel>
-					<TabPanel>
+					<TabPanel className="TabPanel" style={styles.TabPanel}>
 						{props.mydata.slice(24, 32).map((ele) => (
 							<>
 								<div>
-									<a href={site + decodeURIComponent(ele.url.slice(17))}>
+									<a href={site + decodeURIComponent(ele.url.slice(17))} style={{ textDecoration: 'none', color: "black" }}>
 										{ele.title}
 									</a>
 								</div>
@@ -84,11 +84,11 @@ const NoticesList = (props) => {
 							</>
 						))}
 					</TabPanel>
-					<TabPanel>
+					<TabPanel className="TabPanel" style={styles.TabPanel}>
 						{props.mydata.slice(32, 40).map((ele) => (
 							<>
 								<div>
-									<a href={site + decodeURIComponent(ele.url.slice(17))}>
+									<a href={site + decodeURIComponent(ele.url.slice(17))} style={{ textDecoration: 'none', color: "black" }}>
 										{ele.title}
 									</a>
 								</div>
