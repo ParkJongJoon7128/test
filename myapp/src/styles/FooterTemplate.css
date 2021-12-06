@@ -1,11 +1,28 @@
 .Footer {
 	background-color: #320bb2;
 	color: #fff;
-	font-size: 18px;
+	font-size: 22px;
 	padding: 20px;
 	width: 100%;
-	height: 15vh;
+	height: 16vh;
 	text-align: center;
 	margin-top: 15px;
 	padding-top: 30px;
+}
+
+.FiInstagram {
+	cursor: pointer;
+}
+
+/* .FiInstagram:hover {
+	color: #fff;
+	background-color: #320bb2;
+}
+ */
+.BsFacebook {
+	cursor: pointer;
+}
+
+.SiNotion {
+	cursor: pointer;
 }
