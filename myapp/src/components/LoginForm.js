@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch, Redirect } from 'react-router-dom';
+import '../styles/LoginForm.css';
 const axios = require('axios');
-//import '/workspace/test/myapp/src/styles/LoginForm.css';
+
+
 
 const LoginForm = () => {
 	const [email, setEmail] = useState('');
